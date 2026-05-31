@@ -28,7 +28,7 @@ section {
 
 section > h2 {
   font-size: 24px;
-  font-weight: 500;
+  font-weight: 550;
   line-height: 150%;
   text-transform: uppercase;
 }
@@ -173,7 +173,7 @@ header nav a {
   list-style: none;
 }
 
-.base-list > li{
+.base-list > li {
   padding: 1rem;
   background-color: var(--clr-primary);
   border-radius: 3px;
@@ -193,4 +193,56 @@ header nav a {
 
 .conhecimentos-list > li {
   flex-wrap: wrap;
+}
+#contato {
+  gap: 2rem;
+  padding-block: 4rem;
+}
+
+#contato > h2 {
+  margin: 0;
+}
+#contato > ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#contato > ul > li {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+#contato a {
+  color: var(--clr-black);
+  text-decoration: none;
+}
+#contato > cite {
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--clr-primary);
+  padding-block: 1.5rem;
+}
+
+footer a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--clr-black);
+  font-size: 16px;
+  font-weight: 300;
+  text-decoration: none;
+}
+footer img {
+  height: 24px;
 }
