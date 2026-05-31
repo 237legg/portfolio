@@ -20,6 +20,19 @@
   width: 100%;
 }
 
+section {
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+section > h2 {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 150%;
+  text-transform: uppercase;
+}
+
 :root {
   --clr-primary: #8203a8;
   --clr-black: #202225;
@@ -58,8 +71,7 @@ header nav a {
 }
 
 #home {
-  display: flex;
-  flex-direction: column;
+  padding: 0;
   justify-content: center;
   height: 706px;
   background-image: url("/assets/img/a2.png");
@@ -103,20 +115,10 @@ header nav a {
 }
 
 #sobre {
-  display: flex;
-  flex-direction: column;
   gap: 1.25rem;
 
   background-color: var(--clr-black);
   color: var(--clr-white);
-  padding: 2rem 1.5rem;
-}
-
-#sobre > h2 {
-  font-size: 24px;
-  font-weight: 500;
-  line-height: 150%;
-  text-transform: uppercase;
 }
 
 #sobre > img {
@@ -128,4 +130,30 @@ header nav a {
   justify-content: space-between;
   width: 100%;
   gap: 1.5rem;
+}
+
+#projetos {
+  gap: 1.5rem;
+}
+
+.card-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.card {
+  background-color: var(--clr-black);
+  color: var(--clr-white);
+  padding: 1.25rem;
+  border-radius: 8px;
+}
+
+.card > img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.card > h3 {
+  font-weight: 18px;
+  font-weight: 600;
 }
