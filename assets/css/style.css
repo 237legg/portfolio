@@ -4,6 +4,8 @@
 .btn {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   background-color: var(--clr-primary);
+  align-items: center;
+  gap: 0.5rem;
   width: fit-content;
   padding: 0.75rem 1.15rem;
   border-radius: 6px;
@@ -20,6 +22,16 @@
   width: 100%;
 }
 
+.bg-dark {
+  background-color: var(--clr-black);
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 section {
   padding: 2rem 1.5rem;
   display: flex;
@@ -31,6 +43,13 @@ section > h2 {
   font-weight: 550;
   line-height: 150%;
   text-transform: uppercase;
+}
+
+@media screen and (min-width: 1024px) {
+  section {
+    max-width: 1180px;
+    margin: 0 auto;
+  }
 }
 
 :root {
@@ -58,9 +77,15 @@ header h1 {
   font-weight: 800;
 }
 header nav {
-  display: flex;
+  display: none;
   align-items: center;
   gap: 21px;
+}
+
+@media screen and (min-width: 1024px) {
+  header nav {
+    display: flex;
+  }
 }
 
 header nav a {
@@ -78,6 +103,18 @@ header nav a {
   background-repeat: no-repeat;
   background-position: -200px;
   background-size: cover;
+}
+
+@media screen and (min-width: 1024px) {
+  #home {
+    max-width: 100%;
+  }
+
+  .home-cta {
+    max-width: 1180px;
+    margin: 0 auto;
+    width: 100%;
+  }
 }
 
 .home-cta {
@@ -121,8 +158,9 @@ header nav a {
   color: var(--clr-white);
 }
 
-#sobre > img {
-  border-radius: 4px;
+.mobile-sobre > img {
+  width: 100%;
+  border-radius: 12px;
 }
 
 .sobre-links {
@@ -131,6 +169,32 @@ header nav a {
   width: 100%;
   gap: 1.5rem;
 }
+.desktop-sobre {
+  display: none;
+}
+
+.desktop-sobre img {
+  border-radius: 12px;
+  max-width: 460px;
+}
+.desktop-left {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+@media screen and (min-width: 1024px) {
+  .mobile-sobre {
+    display: none;
+  }
+  .desktop-sobre {
+    display: flex;
+    gap: 92px;
+  }
+
+  .desktop-sobre h2 {
+    margin: 0;
+  }
+}
 
 #projetos {
   gap: 1.5rem;
@@ -138,6 +202,7 @@ header nav a {
 
 .card-wrapper {
   display: flex;
+  align-items: center;
   flex-direction: column;
   gap: 1rem;
 }
@@ -146,6 +211,7 @@ header nav a {
   color: var(--clr-white);
   padding: 1.25rem;
   border-radius: 8px;
+  max-width: 300px;
 }
 
 .card > img {
@@ -156,6 +222,17 @@ header nav a {
 .card > h3 {
   font-weight: 18px;
   font-weight: 600;
+}
+
+@media screen and (min-width: 1024px) {
+  #projetos {
+    align-items: center;
+  }
+  .card-wrapper {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
 }
 
 #servicos {
@@ -174,6 +251,9 @@ header nav a {
 }
 
 .base-list > li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 1rem;
   background-color: var(--clr-primary);
   border-radius: 3px;
@@ -188,17 +268,40 @@ header nav a {
 }
 
 .conhecimentos-list {
+  flex-wrap: wrap;
   gap: 20px;
 }
 
 .conhecimentos-list > li {
-  flex-wrap: wrap;
+  width: 72px;
+  height: 72px;
+}
+.conhecimentos-list > li > img {
+  width: 90px;
+}
+
+@media screen and (min-width: 1024px) {
+  #servicos {
+    flex-direction: row;
+  }
+
+  #servicos > div {
+    flex-basis: 50%;
+  }
+  .servicos-list {
+    flex-direction: column;
+  }
+
+  .servicos-list > li {
+    justify-content: start;
+    height: 64px;
+    max-width: 320px;
+  }
 }
 #contato {
   gap: 2rem;
   padding-block: 4rem;
 }
-
 #contato > h2 {
   margin: 0;
 }
@@ -212,8 +315,17 @@ header nav a {
 }
 
 #contato > ul > li {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
   font-size: 18px;
   font-weight: 500;
+}
+
+.icon-wrapper {
+  display: flex;
+  justify-content: end;
+  width: 2rem;
 }
 
 #contato a {
@@ -224,6 +336,12 @@ header nav a {
   text-transform: uppercase;
   font-size: 18px;
   font-weight: 500;
+}
+
+@media screen and (min-width: 1024px) {
+  #contato {
+    align-items: center;
+  }
 }
 
 footer {
